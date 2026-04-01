@@ -1,0 +1,5 @@
+{
+  "name": "SmartServe AI Platform",
+  "description": "An intelligent service platform featuring an AI chatbot, smart recommendations, and a personalized dashboard.",
+  "requestFramePermissions": ["microphone"]
+}
