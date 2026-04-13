@@ -1,20 +1,38 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# SmartServe AI Platform 🚀
 
-# Run and deploy your AI Studio app
+SmartServe is a modern, AI-powered digital service platform designed to revolutionize how businesses interact with technology services. It features an intelligent chatbot, dynamic service recommendations, and a comprehensive user dashboard.
 
-This contains everything you need to run your app locally.
+![SmartServe AI Platform](https://picsum.photos/seed/tech/1200/600)
 
-View your app in AI Studio: https://ai.studio/apps/7dcdbe1b-fa99-4c1f-956a-710b511a2828
+## ✨ Features
 
-## Run Locally
+- **🤖 AI-Powered Assistant**: Real-time chatbot integrated with Google Gemini AI for instant support and service inquiries.
+- **🎙️ Voice Interaction**: Hands-free operation using the Web Speech API for voice-to-text input.
+- **🔍 Smart Recommendations**: Intelligent search engine that suggests relevant IT and business services based on user needs.
+- **📊 Interactive Dashboard**: Track your query history, view personalized recommendations, and manage your activity in one place.
+- **🌓 Dark/Light Mode**: Fully responsive UI with a persistent theme toggle for optimal viewing in any environment.
+- **📱 Responsive Design**: Optimized for all devices, from mobile phones to large desktop monitors.
+- **💾 Local Persistence**: Uses `localStorage` to keep your chat and search history safe across sessions.
 
-**Prerequisites:**  Node.js
+## 🛠️ Tech Stack
 
+- **Frontend**: React 19, TypeScript, Vite
+- **Styling**: Tailwind CSS 4
+- **Animations**: Motion (formerly Framer Motion)
+- **Icons**: Lucide React
+- **AI Integration**: Google Generative AI (@google/genai)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+- A Google Gemini API Key
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/smartserve-ai.git
+   cd smartserve-ai
