@@ -1,99 +1,117 @@
-# SmartServe AI: Intelligent Service Orchestration Platform 🌐
+# 🚀 SmartServe AI
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![React](https://img.shields.io/badge/Frontend-React_19-blue?logo=react)](https://react.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Styling-Tailwind_4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
-[![Vite](https://img.shields.io/badge/Build_Tool-Vite_6-646CFF?logo=vite)](https://vitejs.dev/)
-[![AI](https://img.shields.io/badge/AI-Gemini_Pro-orange?logo=google-gemini)](https://ai.google.dev/)
-
-SmartServe AI is a production-grade, full-featured service platform designed to bridge the gap between complex enterprise services and end-user accessibility. By leveraging state-of-the-art Generative AI, the platform provides a seamless, conversational interface for service discovery, recommendation, and management.
+SmartServe AI is a modern AI-powered service platform that helps users discover, interact with, and manage digital services through a conversational interface and intelligent recommendations.
 
 ---
 
-## 🛠 Core Technologies & Languages
+## ✨ Features
 
-This project is built using a modern web stack designed for high performance, scalability, and maintainability:
+### 🤖 AI Assistant
+- Powered by Google Gemini (`@google/genai`)
+- Real-time chat interface
+- Context-aware responses
+- Typing simulation for better UX
 
-*   **HTML5 & Semantic Markup**: Ensuring accessibility (A11y) and SEO optimization.
-*   **CSS3 (Tailwind CSS 4.0)**: Utilizing utility-first styling for rapid UI development and consistent design tokens.
-*   **JavaScript (ES2022+)**: Powering the application logic with modern functional programming patterns.
-*   **React 19**: Utilizing the latest concurrent rendering features and hooks for a reactive user experience.
-*   **Node.js Runtime**: Supporting the development environment and build pipeline.
+### 🔍 Smart Service Recommendations
+- Keyword-based filtering system
+- Matches user queries with service catalog
+- Stores recent queries in local history
 
----
+### 📊 Dashboard
+- Tracks:
+  - Total queries
+  - Recommendation history
+  - User activity
+- Lightweight analytics via localStorage
 
-## 🚀 Key Modules
+### 🎤 Voice Input
+- Uses Web Speech API (`webkitSpeechRecognition`)
+- Converts speech → text input
 
-### 1. Intelligent Chatbot Engine
-A sophisticated conversational interface that utilizes the **Google Gemini Pro** model. It features:
-- Context-aware responses.
-- Real-time typing simulations.
-- Integrated **Web Speech API** for seamless voice-to-text interaction.
-
-### 2. Service Recommendation Logic
-A dynamic filtering engine that processes user intent to suggest the most relevant business services. It uses a rule-based algorithm to match natural language queries with a structured service catalog.
-
-### 3. Activity Dashboard
-A data-driven visualization layer that provides users with:
-- Historical query tracking.
-- Personalized service shortcuts.
-- Real-time session analytics.
-
----
-
-## 🏗 Build & Development Pipeline
-
-The project utilizes **Vite 6** as the primary build tool and development server, offering:
-
-1.  **Fast Refresh**: Instant feedback during development without full page reloads.
-2.  **Tree Shaking**: Automatic removal of unused code during the production build to minimize bundle size.
-3.  **Asset Optimization**: Automated minification of CSS and JavaScript, and optimization of static assets.
-4.  **Environment Management**: Secure handling of API keys and configuration via `.env` files.
-
-### Build Commands
-
-| Command | Action |
-| :--- | :--- |
-| `npm install` | Installs all project dependencies and dev-tools. |
-| `npm run dev` | Starts the local development server with HMR. |
-| `npm run build` | Compiles and optimizes the project for production deployment. |
-| `npm run lint` | Runs static code analysis to ensure code quality. |
+### 🌙 Dark Mode
+- Persistent theme using localStorage
+- Smooth UI transitions
 
 ---
 
-## 📦 Project Architecture
+## 🧱 Tech Stack
 
-```text
+| Layer | Technology |
+|------|-----------|
+| Frontend | React 19 |
+| Styling | Tailwind CSS |
+| Build Tool | Vite |
+| Language | TypeScript |
+| AI | Google Gemini API |
+| Icons | Lucide React |
+| Animation | Motion |
+
+---
+
+## 📁 Project Structure
 root/
 ├── src/
-│   ├── services/       # Business logic and AI integration layers
-│   ├── components/     # Atomic UI components and layout modules
-│   ├── types/          # Data structure definitions
-│   ├── App.js          # Main application controller
-│   └── index.css       # Global design tokens and Tailwind imports
-├── public/             # Static assets (images, icons, manifests)
-├── vite.config.js      # Build tool configuration
-└── package.json        # Project metadata and dependency manifest
-```
+│ ├── App.tsx # Main application logic & UI
+│ ├── main.tsx # React entry point
+│ ├── index.css # Tailwind styles
+│ ├── data.ts # Service dataset + recommendation logic
+│ ├── types.ts # TypeScript interfaces
+│
+├── index.html # App root HTML
+├── vite.config.ts # Vite + env config
+├── tsconfig.json # TypeScript config
+├── package.json # Dependencies & scripts
+├── metadata.json # App metadata & permissions
+└── .env.example # Environment variables template
+
 
 ---
 
-## 🛡 Security & Safety
+## ⚙️ Setup & Installation
 
-- **Client-Side Sanitization**: All user inputs are sanitized before being processed by the AI or rendered in the UI.
-- **Local Storage Isolation**: User data is stored locally on the client's machine, ensuring privacy and data sovereignty.
-- **API Key Protection**: Sensitive keys are managed via environment variables and never committed to version control.
+### 1. Clone the repo
+```bash
+git clone https://github.com/your-username/smartserve-ai.git
+cd smartserve-ai
+2. Install dependencies
+npm install
+3. Configure environment variables
 
----
+Create a .env file:
 
-## 🤝 Contact & Support
+GEMINI_API_KEY=your_api_key_here
 
-For technical inquiries, collaboration, or support:
+Required for AI responses.
 
-- **Lead Developer**: Srinamith
-- **Email**: [tsrinamithwarrox@gmail.com](mailto:tsrinamithwarrox@gmail.com)
-- **Phone**: +91 9182133499
-- **Organization**: Pragati Engineering College, Surampaalem
+▶️ Running the Project
+Development
+npm run dev
 
----
-*Built with precision for the next generation of AI-driven web applications.*
+Runs on:
+
+http://localhost:3000
+Production Build
+npm run build
+npm run preview
+🧠 How It Works
+AI Chat Flow
+User sends input
+Request sent to Gemini API
+Response rendered in chat UI
+Stored in localStorage (chat_history)
+Recommendation Engine
+Simple string matching:
+service.name.includes(query)
+service.description.includes(query)
+service.category.includes(query)
+State Persistence
+chat_history
+query_history
+theme
+
+All stored in browser localStorage.
+
+🔐 Environment & Security
+API key injected via Vite config
+Fully client-side (no backend)
+No sensitive data stored externally
